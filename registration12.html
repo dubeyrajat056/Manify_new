@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Manify</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <!-- <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">
+                    <div class="nav-logo">M</div>
+                    Manify
+                </a>
+
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="company.html" class="nav-link">For Companies</a>
+                    <a href="vendor.html" class="nav-link">For Vendors</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                </div>
+
+                <div class="nav-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="registration.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-brand">
+                    <div class="nav-logo">
+                        <img src="./img/Manify.png" alt="Manify Logo" 
+                             onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
+                    </div>
+                </a>
+
+                <button class="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="company.html" class="nav-link">For Companies</a>
+                    <a href="vendor.html" class="nav-link">For Vendors</a>
+                    <a href="about.html" class="nav-link">About Us</a>
+                    
+                    <div class="nav-buttons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="registration.html" class="btn btn-primary active">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- <div class="nav-buttons desktop-buttons">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="registration.html" class="btn btn-primary">Get Started</a>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Main Content -->
+    <section class="page-content" style="padding: 160px 0 100px;">
+        <div class="container">
+            <div class="registration-container">
+                <div class="form-header">
+                    <h3>Join Manify</h3>
+                    <p class="mb-0" style="color: antiquewhite;">Complete your registration in a few simple steps to start connecting with
+                        quality-focused business partners</p>
+                </div>
+                <div class="form-body">
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 14.28%"></div>
+                    </div>
+
+                    <!-- Step 1: Basic Information -->
+                    <div class="form-step active" id="step1">
+                        <h4 class="mb-4">Basic Information</h4>
+                        <p style="color: #636E72; margin-bottom: 2rem;">Let's start with the basic details to create
+                            your Manify account.</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name <span style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span style="color: #FF6B6B;">*</span></label>
+                                <input type="email" class="form-control" id="email"
+                                    placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mobile">Mobile Number <span style="color: #FF6B6B;">*</span></label>
+                                <input type="tel" class="form-control" id="mobile"
+                                    placeholder="Enter your mobile number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password <span style="color: #FF6B6B;">*</span></label>
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Create a strong password" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="userType">You are here as <span style="color: #FF6B6B;">*</span></label>
+                                <select class="form-control" id="userType" required>
+                                    <option value="" selected disabled>Select your role</option>
+                                    <option value="vendor">Vendor (I want to sell products/services)</option>
+                                    <option value="company">Company (I want to buy products/services)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="accountType">Account Type <span style="color: #FF6B6B;">*</span></label>
+                                <select class="form-control" id="accountType" required>
+                                    <option value="" selected disabled>Select account type</option>
+                                    <option value="individual">Individual/Freelancer</option>
+                                    <option value="business">Business/Organization</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn" disabled>Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn1">Continue to Business
+                                Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Business/Individual Information -->
+                    <div class="form-step" id="step2">
+                        <h4 class="mb-4" id="step2Title">Business Information</h4>
+                        <p style="color: #636E72; margin-bottom: 2rem;">Tell us more about your business to help us
+                            match you with the right partners.</p>
+
+                        <div id="businessInfo">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="legalBusinessName">Legal Business Name <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="legalBusinessName"
+                                        placeholder="Enter legal business name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registeredAddress">Registered Business Address <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="registeredAddress"
+                                        placeholder="Enter registered address" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="businessEntity">Type of Business Entity <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <select class="form-control" id="businessEntity" required>
+                                        <option value="" selected disabled>Select entity type</option>
+                                        <option value="pvt">Private Limited Company</option>
+                                        <option value="llp">Limited Liability Partnership (LLP)</option>
+                                        <option value="partnership">Partnership Firm</option>
+                                        <option value="sole">Sole Proprietorship</option>
+                                        <option value="public">Public Limited Company</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="registrationNo">Company Registration No. <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="registrationNo"
+                                        placeholder="Enter registration number" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="incorporationDate">Date of Incorporation <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="date" class="form-control" id="incorporationDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="businessPhone">Business Phone No. <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="tel" class="form-control" id="businessPhone"
+                                        placeholder="Enter business phone number" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="individualInfo" style="display: none;">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="legalName">Full Legal Name <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="legalName"
+                                        placeholder="Enter your full legal name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="residentialAddress">Residential Address <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="residentialAddress"
+                                        placeholder="Enter your residential address" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="governmentId">Government Issued ID <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="governmentId"
+                                    placeholder="e.g., Aadhar, Passport, Driver's License" required>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn2">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn2">Continue to Bank
+                                Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Bank Information -->
+                    <div class="form-step" id="step3">
+                        <h4 class="mb-4">Bank Account Information</h4>
+                        <p style="color: #636E72; margin-bottom: 2rem;">Provide your bank details for secure
+                            transactions and payments.</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bankName">Bank Name <span style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="bankName" placeholder="Enter bank name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="accountHolderName">Account Holder Name <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="accountHolderName"
+                                    placeholder="Enter account holder name" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="accountNumber">Bank Account No. <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="accountNumber"
+                                    placeholder="Enter account number" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ifscCode">IFSC Code <span style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="ifscCode" placeholder="Enter IFSC code"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bankBranch">Bank Branch Address <span style="color: #FF6B6B;">*</span></label>
+                            <input type="text" class="form-control" id="bankBranch"
+                                placeholder="Enter bank branch address" required>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn3">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn3">Continue to Identity
+                                Verification</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Identity Verification -->
+                    <div class="form-step" id="step4">
+                        <h4 class="mb-4">Identity Verification (KYC)</h4>
+                        <p style="color: #636E72; margin-bottom: 2rem;">Upload required documents for identity
+                            verification and KYC compliance.</p>
+
+                        <div class="form-group">
+                            <label for="govIdDocument">Government Issued Photo ID <span
+                                    style="color: #FF6B6B;">*</span></label>
+                            <input type="file" class="form-control" id="govIdDocument" accept=".jpg,.jpeg,.png,.pdf"
+                                required>
+                            <small style="color: #636E72;">Upload a clear copy of your government-issued ID (Aadhar,
+                                Passport, Driver's License, etc.)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bankStatement">Recent Bank Account Statement <span
+                                    style="color: #FF6B6B;">*</span></label>
+                            <input type="file" class="form-control" id="bankStatement" accept=".jpg,.jpeg,.png,.pdf"
+                                required>
+                            <small style="color: #636E72;">Upload a recent bank statement (last 3 months)</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="addressProof">Utility Bill or Business Address Proof <span
+                                    style="color: #FF6B6B;">*</span></label>
+                            <input type="file" class="form-control" id="addressProof" accept=".jpg,.jpeg,.png,.pdf"
+                                required>
+                            <small style="color: #636E72;">Upload a recent utility bill or other document proving your
+                                address</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="selfieVerification">Selfie Verification <span
+                                    style="color: #FF6B6B;">*</span></label>
+                            <input type="file" class="form-control" id="selfieVerification" accept=".jpg,.jpeg,.png"
+                                required>
+                            <small style="color: #636E72;">Upload a clear selfie photo for identity verification</small>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn4">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn4">Continue to Tax
+                                Information</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Tax Information -->
+                    <div class="form-step" id="step5">
+                        <h4 class="mb-4">Tax Information</h4>
+                        <p style="color: #636E72; margin-bottom: 2rem;">Provide your tax details for compliance and
+                            invoicing purposes.</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="taxId">Tax ID Number <span style="color: #FF6B6B;">*</span></label>
+                                <input type="text" class="form-control" id="taxId" placeholder="Enter tax ID number"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="businessTypeTax">Business Type for Tax Purposes <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <select class="form-control" id="businessTypeTax" required>
+                                    <option value="" selected disabled>Select business type</option>
+                                    <option value="individual">Individual</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="corporation">Corporation</option>
+                                    <option value="llc">LLC</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="taxCertification">Tax Certification or Registration Document <span
+                                    style="color: #FF6B6B;">*</span></label>
+                            <input type="file" class="form-control" id="taxCertification" accept=".jpg,.jpeg,.png,.pdf"
+                                required>
+                            <small style="color: #636E72;">Upload your tax certification or registration
+                                document</small>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn5">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn5">Continue to Business
+                                Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 6: Product/Service Information -->
+                    <div class="form-step" id="step6">
+                        <h4 class="mb-4" id="step6Title">Product/Service Information</h4>
+                        <p style="color: #636E72; margin-bottom: 2rem;">Tell us about your products or procurement needs
+                            to help us make better matches.</p>
+
+                        <div id="vendorProductInfo">
+                            <div class="form-group">
+                                <label for="productCategories">Product Categories <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <select class="form-control" id="productCategories" multiple required
+                                    style="height: 120px;">
+                                    <option value="electronics">Electronics & Electrical</option>
+                                    <option value="textiles">Textiles & Apparel</option>
+                                    <option value="food">Food & Beverage Products</option>
+                                    <option value="machinery">Machinery & Equipment</option>
+                                    <option value="rawmaterials">Raw Materials</option>
+                                    <option value="chemicals">Chemicals & Pharmaceuticals</option>
+                                    <option value="construction">Construction Materials</option>
+                                    <option value="automotive">Automotive Parts</option>
+                                    <option value="furniture">Furniture & Home Decor</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <small style="color: #636E72;">Hold Ctrl/Cmd to select multiple categories</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="productDescription">Product/Service Description <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <textarea class="form-control" id="productDescription" rows="4"
+                                    placeholder="Describe your products or services in detail, including key features and quality standards"
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="productionCapacity">Production Capacity <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="productionCapacity"
+                                        placeholder="e.g., 1000 units/month" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="qualityCertifications">Quality Certifications</label>
+                                    <input type="text" class="form-control" id="qualityCertifications"
+                                        placeholder="e.g., ISO 9001, CE Mark, etc.">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="companyProcurementInfo" style="display: none;">
+                            <div class="form-group">
+                                <label for="procurementCategories">Procurement Categories <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <select class="form-control" id="procurementCategories" multiple required
+                                    style="height: 120px;">
+                                    <option value="electronics">Electronics & Electrical</option>
+                                    <option value="textiles">Textiles & Apparel</option>
+                                    <option value="food">Food & Beverage Products</option>
+                                    <option value="machinery">Machinery & Equipment</option>
+                                    <option value="rawmaterials">Raw Materials</option>
+                                    <option value="chemicals">Chemicals & Pharmaceuticals</option>
+                                    <option value="construction">Construction Materials</option>
+                                    <option value="automotive">Automotive Parts</option>
+                                    <option value="furniture">Furniture & Home Decor</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <small style="color: #636E72;">Hold Ctrl/Cmd to select multiple categories</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="procurementNeeds">Procurement Needs Description <span
+                                        style="color: #FF6B6B;">*</span></label>
+                                <textarea class="form-control" id="procurementNeeds" rows="4"
+                                    placeholder="Describe your procurement needs, including volume requirements and quality standards"
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="annualProcurement">Annual Procurement Volume <span
+                                            style="color: #FF6B6B;">*</span></label>
+                                    <input type="text" class="form-control" id="annualProcurement"
+                                        placeholder="e.g., $500,000 annually" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="preferredRegions">Preferred Vendor Regions</label>
+                                    <input type="text" class="form-control" id="preferredRegions"
+                                        placeholder="e.g., North India, Southeast Asia, etc.">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn6">Previous</button>
+                            <button type="button" class="btn btn-primary" id="nextBtn6">Review & Submit</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 7: Review & Submit -->
+                    <div class="form-step" id="step7">
+                        <h4 class="mb-4">Review & Submit</h4>
+                        <div class="alert alert-info"
+                            style="background: #F7F9FC; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #4A3AFF; margin-bottom: 2rem;">
+                            <h5 style="margin-bottom: 0.5rem; color: #3A2BD6;">Almost Done!</h5>
+                            <p class="mb-0" style="color: #2D3436;">Please review all the information you've provided.
+                                Once submitted, our team will verify your details and activate your account within 2-3
+                                business days.</p>
+                        </div>
+
+                        <div style="background: #F7F9FC; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <h5 style="margin-bottom: 1rem; color: #2D3436;">Basic Information</h5>
+                            <div class="review-grid">
+                                <div><strong>Full Name:</strong> <span id="reviewFullName"></span></div>
+                                <div><strong>Email:</strong> <span id="reviewEmail"></span></div>
+                                <div><strong>Mobile:</strong> <span id="reviewMobile"></span></div>
+                                <div><strong>Account Type:</strong> <span id="reviewAccountType"></span></div>
+                            </div>
+                        </div>
+
+                        <div style="background: #F7F9FC; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <h5 style="margin-bottom: 1rem; color: #2D3436;" id="reviewStep2Title">Business/Individual
+                                Information</h5>
+                            <div id="reviewStep2Content"></div>
+                        </div>
+
+                        <div style="background: #F7F9FC; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <h5 style="margin-bottom: 1rem; color: #2D3436;">Bank Information</h5>
+                            <div class="review-grid">
+                                <div><strong>Bank Name:</strong> <span id="reviewBankName"></span></div>
+                                <div><strong>Account Holder:</strong> <span id="reviewAccountHolder"></span></div>
+                                <div><strong>Account Number:</strong> <span id="reviewAccountNumber"></span></div>
+                                <div><strong>IFSC Code:</strong> <span id="reviewIfsc"></span></div>
+                            </div>
+                        </div>
+
+                        <div style="background: #F7F9FC; padding: 1.5rem; border-radius: 12px; margin-bottom: 1.5rem;">
+                            <h5 style="margin-bottom: 1rem; color: #2D3436;" id="reviewStep6Title">Product/Procurement
+                                Information</h5>
+                            <div id="reviewStep6Content"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <div style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                <input type="checkbox" id="agreeTerms" required style="margin-top: 0.2rem;">
+                                <label for="agreeTerms" style="display: inline; line-height: 1.5;">
+                                    I agree to the <a href="#" style="color: #4A3AFF;">Terms of Service</a> and <a
+                                        href="#" style="color: #4A3AFF;">Privacy Policy</a> of Manify
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn btn-secondary" id="prevBtn7">Previous</button>
+                            <button type="button" class="btn btn-primary" id="submitBtn">Submit Application</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-brand">
+                        <!-- <a href="index.html" class="footer-logo">
+                            <div class="footer-logo-icon">M</div>
+                            Manify
+                        </a> -->
+
+                        <a href="index.html" class="footer-logo">
+                            <div class="footer-logo-icon">
+                                <img src="./img/Manify.png" alt="Manify Logo"
+                                    onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='flex';">
+                            </div>
+                        </a>
+                        
+                    </div>
+                    <p class="footer-about">Connecting quality-focused companies with verified vendors for seamless,
+                        trustworthy B2B transactions worldwide.</p>
+                    <div class="social-links">
+                        <a href="#">f</a>
+                        <a href="#">in</a>
+                        <a href="#">t</a>
+                        <a href="#">ig</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="company.html">For Companies</a></li>
+                        <li><a href="vendor.html">For Vendors</a></li>
+                        <li><a href="about.html">How It Works</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                        <li><a href="#">Pricing</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Manify. All rights reserved. | <a href="#"
+                        style="color: rgba(255, 255, 255, 0.7);">Privacy Policy</a> | <a href="#"
+                        style="color: rgba(255, 255, 255, 0.7);">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
